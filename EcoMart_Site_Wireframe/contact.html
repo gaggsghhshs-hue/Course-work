@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EcoMart</title>
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+  <header class="header">
+    <nav class="nav" aria-label="Primary">
+      <div class="brand">EcoMart</div>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="products.html">Products</a>
+        <a href="blog.html">Blog</a>
+        <a href="research.html">Research</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="search">
+        <input id="searchInput" type="search" placeholder="Search for Products" onkeydown="handleSearchInput(event)">
+      </div>
+    </nav>
+  </header>
+  <div id="globalModal" class="modal" role="dialog" aria-modal="true">
+    <div class="panel">
+      <h3>EcoMart Notice</h3>
+      <p class="modal-message">...</p>
+      <div style="display:flex; justify-content:flex-end"><button class="btn" onclick="closePopup()">Close</button></div>
+    </div>
+  </div>
+
+    <main class="container">
+      <h2>Contact</h2>
+      <form id="contactForm" onsubmit="validateContactForm(event)" novalidate>
+        <label for="name">Full Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write at least 10 characters" required></textarea>
+        <p id="formError" class="error" style="display:none"></p>
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </main>
+  <footer class="footer">
+    <div class="container">
+      <small>© 2026 EcoMart. All rights reserved.</small>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+
+  </body>
+</html>

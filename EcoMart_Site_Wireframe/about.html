@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EcoMart</title>
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+  <header class="header">
+    <nav class="nav" aria-label="Primary">
+      <div class="brand">EcoMart</div>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="products.html">Products</a>
+        <a href="blog.html">Blog</a>
+        <a href="research.html">Research</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="search">
+        <input id="searchInput" type="search" placeholder="Search for Products" onkeydown="handleSearchInput(event)">
+      </div>
+    </nav>
+  </header>
+  <div id="globalModal" class="modal" role="dialog" aria-modal="true">
+    <div class="panel">
+      <h3>EcoMart Notice</h3>
+      <p class="modal-message">...</p>
+      <div style="display:flex; justify-content:flex-end"><button class="btn" onclick="closePopup()">Close</button></div>
+    </div>
+  </div>
+
+    <main class="container">
+      <h2>About</h2>
+      <div class="grid">
+        <div class="card"><img src="assets/images/607199437_895519612943482_5971018361102862669_n.jpg" alt="Team or product"><div class="content"><h3>Girish Shrestha</h3><p>EcoMart coursework lead.</p></div></div>
+        <div class="card"><div class="content"><h3>Portfolio</h3><p>Skills: HTML, CSS, JS. Education & certifications TBD.</p></div></div>
+      </div>
+    </main>
+  <footer class="footer">
+    <div class="container">
+      <small>© 2026 EcoMart. All rights reserved.</small>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+
+  </body>
+</html>

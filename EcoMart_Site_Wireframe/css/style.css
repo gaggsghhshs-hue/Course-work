@@ -1,0 +1,179 @@
+
+/* EcoMart wireframe-aligned styles
+   - Clean header with brand, centered links, and right-aligned search
+   - Spacious hero/content blocks
+   - Consistent cards/grids/tables
+   - Minimalistic theme that matches your PDF wireframe
+*/
+
+/* Theme tokens */
+:root{
+  --primary:#2d6a4f;    /* deep eco green */
+  --bg:#ffffff;         /* background */
+  --text:#1d1d1f;       /* body text */
+  --card:#f7f9fb;       /* card surfaces */
+  --muted:#6b7280;      /* subtle text */
+  --border:#e5e7eb;     /* light borders */
+}
+
+/* Reset-ish */
+*{ box-sizing:border-box; }
+html, body{ height:100%; }
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
+}
+
+/* Header / Navigation */
+.header{
+  position:sticky;
+  top:0;
+  background:var(--bg);
+  border-bottom:1px solid var(--border);
+  z-index:100;
+}
+.nav{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  /* Brand | Links | Search (right) */
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  gap:12px;
+  padding:12px 16px;
+}
+.brand{ font-weight:700; font-size:1.1rem; }
+.nav-links a{
+  color:var(--text);
+  text-decoration:none;
+  margin:0 8px;
+  padding:6px 8px;
+  border-radius:6px;
+}
+.nav-links a:hover,
+.nav-links a.active{ background:var(--card); }
+.search{ display:flex; justify-content:flex-end; }
+.search input{
+  width:100%;
+  max-width:280px;
+  padding:8px 10px;
+  border:1px solid #d1d5db;
+  border-radius:8px;
+}
+
+/* Layout helpers */
+.container{ max-width:1100px; margin:24px auto; padding:0 16px; }
+
+/* Hero (Home) */
+.hero{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  align-items:center;
+}
+.hero .headline{
+  background:var(--card);
+  padding:18px;
+  border-radius:12px;
+}
+.muted{ color:var(--muted); }
+
+/* Grids & Cards */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+  gap:16px;
+}
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+}
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+.card .content{ padding:12px; }
+
+/* Tables (Research page) */
+.table{ width:100%; border-collapse:collapse; }
+.table th, .table td{
+  border:1px solid var(--border);
+  padding:8px;
+}
+.table th{ background:#f9fafb; }
+
+/* Buttons */
+.btn{
+  background:var(--primary);
+  color:#fff;
+  border:none;
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+}
+.btn:disabled{ opacity:.6; cursor:not-allowed; }
+
+/* Modal (popup feature) */
+.modal{
+  position:fixed;
+  inset:0;
+  display:none;              /* toggled to .show via JS */
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,.35);
+}
+.modal .panel{
+  background:#fff;
+  padding:20px;
+  border-radius:12px;
+  max-width:420px;
+  width:92%;
+}
+.modal.show{ display:flex; }
+
+/* Form elements (Contact page) */
+label{ display:block; margin:8px 0 4px; }
+input, textarea, select{
+  width:100%;
+  padding:10px;
+  border:1px solid #d1d5db;
+  border-radius:8px;
+  background:#fff;
+  color:var(--text);
+}
+.error{ color:#c62828; }
+
+/* Footer */
+.footer{
+  border-top:1px solid var(--border);
+  background:#fafafa;
+  padding:20px;
+}
+.footer small{ color:var(--muted); }
+
+/* Accessibility: keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible{
+  outline:3px solid #94d3a2;  /* soft green outline */
+  outline-offset:2px;
+  border-radius:6px;
+}
+
+/* Responsive tweaks */
+@media (max-width:900px){
+  .nav{ grid-template-columns:1fr auto; }
+  .search{ grid-column:1 / -1; justify-content:start; }
+}
+@media (max-width:768px){
+  .hero{ grid-template-columns:1fr; }
+  .search input{ max-width:100%; }
+}
