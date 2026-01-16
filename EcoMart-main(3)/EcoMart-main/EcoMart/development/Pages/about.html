@@ -1,0 +1,171 @@
+<html>
+<!-- EcoMart - About Us Page | Team profiles -->
+<head>
+    <title>About Us - EcoMart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    
+    <style>
+        /* Navigation */
+        .select a { color: #FF9900; }
+        .selected a { color: #009E0F; }
+    
+        /* Team container */
+        .container { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+
+        /* Profile cards */
+        .profile-card { background-color: #fff; border: 2px solid #4CAF50; border-radius: 10px; width: 300px; padding: 20px; text-align: center; }
+        .profile-card h2 { color: #4CAF50; margin: 10px 0 5px; }
+        .profile-card h4 { color: #FF9800; margin: 5px 0 15px; }
+        .profile-card p { color: #333; font-size: 14px; margin-bottom: 15px; }
+
+        /* Social icons */
+        .social-icons { display: flex; justify-content: center; gap: 15px; }
+        .social-icons a { text-decoration: none; color: #FF9800; font-size: 20px; }
+
+        /* Read more link */
+        .read-more { display: inline-block; margin-top: 10px; color: #4CAF50; text-decoration: underline; cursor: pointer; }
+
+        /* Extra content hidden */
+        .extra-content { display: none; color: #333; font-size: 14px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <!-- ========== NAVIGATION BAR ========== -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="home.html">
+                <img src="..\Assets\Images\logo.png" alt="EcoMart Logo" height="100">
+            </a>
+        </div>    
+        <div class="links">
+            <nav class="select"> <a href="home.html">Home</a> </nav>
+            <nav class="select"> <a href="products.html">Products</a> </nav>
+            <nav class="select"> <a href="blog.html">Blog</a> </nav>
+            <nav class="select"> <a href="research.html">Research</a> </nav>
+            <nav class="selected"> <a href="about.html">About Us</a> </nav>
+            <nav class="select"> <a href="contact.html">Contact Us</a> </nav>
+        </div>
+        <div class="cart">
+            <a href="cart.html" style="font-size: 2rem;">🛒</a>
+        </div>
+    </div>
+    
+    <!-- ========== PAGE HEADING ========== -->
+    <h1 style="text-align:center; color:#4CAF50;">Meet Our Team</h1>
+    
+    <!-- ========== TEAM MEMBERS CONTAINER ========== -->
+    <div class="container">
+    
+        <!-- ========== MEMBER 1: MANJIL DANGOL ========== -->
+        <div class="profile-card">
+            <h2>Manjil Dangol</h2>
+            <h4>Developer/Film maker</h4>
+            <p>My name is Manjil dangol. Iam currently studying computing in Islington college.</p>
+            <span class="read-more" onclick="toggleReadMore('extraContent0', this)">Read More</span>
+            <div class="extra-content" id="extraContent0">
+                <h2>Education</h2>
+                <p>+2 degree - United College</p>
+                <p>Stream = Science</p>
+                <h2>Skills</h2>
+                <p>Technical skills:(Photoshop,Premiere Pro)</p>
+                <p>Soft Skills:(communication, teamwork)</p>
+                <h2>Hobbies</h2>
+                <p>Photography,videography & premiere pro</p>
+                <p>Basketball</p>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i>LinkedIn</i></a>
+                <a href="#"><i>Facebook</i></a>
+            </div>
+        </div>
+
+        <!-- ========== MEMBER 2: HIMAL DAHAL ========== -->
+        <div class="profile-card">
+            <h2>Himal Dahal</h2>
+            <h4>Developer</h4>
+            <p>My name is Himal Dahal. Iam currently studying computing in Islington college.</p>
+            <span class="read-more" onclick="toggleReadMore('extraContent1', this)">Read More</span>
+            <div class="extra-content" id="extraContent1">
+                <h2>Education</h2>
+                <p>+2 degree from DAV college</p>
+                <p>Stream = Science</p>
+                <h2>Skills</h2>
+                <p>Soft Skills:(communication, teamwork)</p>
+                <h2>Hobbies</h2>
+                <p>Travelling,Reading</p>
+                <p>Combat Sports(MMA, Muay thai)</p>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i>LinkedIn</i></a>
+                <a href="#"><i>Facebook</i></a>
+            </div>
+        </div>
+
+        <!-- ========== MEMBER 3: GIRISH SHRESTHA ========== -->
+        <div class="profile-card">
+            <h2>Girish Shrestha</h2>
+            <h4>Developer</h4>
+            <p>My name is Girish Shrestha. Iam currently studying computing in Islington college.</p>
+            <span class="read-more" onclick="toggleReadMore('extraContent2', this)">Read More</span>
+            <div class="extra-content" id="extraContent2">
+                <h2>Education</h2>
+                <p>+2 degree from United Academy</p>
+                <p>Stream = Science</p>
+                <h2>Skills</h2>
+                <p>Technical Skills:(Graphic desinging)</p>
+                <p>Soft Skills:(communication, teamwork)</p>
+                <h2>Hobbies</h2>
+                <p>Travelling</p>
+                <p>Combat Sports</p>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i>LinkedIn</i></a>
+                <a href="#"><i>Facebook</i></a>
+            </div>
+        </div>
+
+        <!-- ========== MEMBER 4: DIKSHANT LAMA ========== -->
+        <div class="profile-card">
+            <h2>Dikshant Lama</h2>
+            <h4>Developer</h4>
+            <p>My name is Dikshant Lama. Iam currently studying computing in Islington college.</p>
+            <span class="read-more" onclick="toggleReadMore('extraContent3', this)">Read More</span>
+            <div class="extra-content" id="extraContent3">
+                <h2>Education</h2>
+                <p>+2 degree from Uniglobe College</p>
+                <p>Stream = Science</p>
+                <h2>Skills</h2>
+                <p>Soft Skills:(communication, teamwork)</p>
+                <h2>Hobbies</h2>
+                <p>Travelling,Reading</p>
+                <p>Combat Sports</p>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i>LinkedIn</i></a>
+                <a href="#"><i>Facebook</i></a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <p>&copy; 2026 EcoMart. All rights reserved.</p>
+    </footer>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+        // Toggle Read More/Less functionality for team members
+        function toggleReadMore(contentId, linkElement) {
+            const content = document.getElementById(contentId);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                linkElement.textContent = "Read Less";
+            } else {
+                content.style.display = "none";
+                linkElement.textContent = "Read More";
+            }
+        }
+    </script>
+</body>
+</html>

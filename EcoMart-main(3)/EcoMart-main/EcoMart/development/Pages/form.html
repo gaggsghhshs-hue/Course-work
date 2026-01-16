@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>form validation</title>
+</head>
+<body>
+   <form onsubmit="validateForm()">
+   	 <label>First Name:</label>
+   	 <input type="text" id="fname">
+   	 <br><br>
+   	 <label>Last Name:</label>
+   	 <input type="text" id="lname">
+   	 <br><br>
+   	 <label>Gender:</label>
+   	 <input type="radio" name="genderDetails" value="male" checked>Male
+   	 <input type="radio" name="genderDetails" value="female">Female
+   	 <br><br>
+   	 <label>Message:</label>
+   	 <br>
+   	 <textarea rows="10" cols="25" id="message" placeholder="Enter your message"></textarea>
+   	 <br><br>
+   	 <input type="submit" value="Submit Button">
+   </form>
+</body>
+<script>
+	function validateForm(){
+		var fname=document.getElementById("fname").value;
+		var lname=document.getElementById("lname").value;
+		var message=document.getElementById("message").value;
+
+		if (fname=="" || lname=="" || message=="") {
+			alert("All values are required.")
+		}
+		else {
+			alert("Thank You")
+		}
+	}
+</script>
+</html>

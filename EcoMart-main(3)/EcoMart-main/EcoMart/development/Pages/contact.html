@@ -1,0 +1,480 @@
+<html>
+<!-- 
+    EcoMart - Contact Us Page
+    Description: Contact form and company contact information
+    Author: EcoMart Development Team
+    Date: 2026
+-->
+<head>
+    <title>Contact Us - EcoMart</title>
+    <!-- Set viewport for responsive design on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    
+    <!-- Internal CSS Styles for Contact Page -->
+    <style>
+        /* Full height layout with flexbox */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Body uses flexbox for vertical layout */
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navbar doesn't shrink */
+        .navbar {
+            flex-shrink: 0;
+        }
+
+        /* Contact header styling - banner section */
+        .contact-header {
+            background-color: #f0fdf0; /* Light green background */
+            padding: 60px 5%;
+            text-align: center;
+            border-bottom: 2px solid #009E0F; /* Green border */
+            flex-shrink: 0;
+        }
+
+        /* Contact header heading */
+        .contact-header h1 {
+            color: #009E0F; /* EcoMart green */
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        /* Contact header paragraph */
+        .contact-header p {
+            color: #555;
+            font-size: 1.1rem;
+            margin: 10px 0 0 0;
+        }
+
+        /* Contact content container - flex layout */
+        .contact-container {
+            flex: 1; /* Takes remaining space */
+            padding: 50px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        /* Contact information section */
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        /* Contact information heading */
+        .contact-info h2 {
+            color: #FF9900; /* Orange heading */
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        /* Contact info boxes styling */
+        .Info-box {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-left: 4px solid #009E0F; /* Green left border */
+            border-radius: 5px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Contact info box bold labels */
+        .Info-box strong {
+            color: #009E0F;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Contact form styling */
+        .Contact-Form {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 300px;
+        }
+
+        /* Contact form heading */
+        .Contact-Form h2 {
+            color: #009E0F;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        /* Form label styling */
+        .Contact-Form label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        /* Text input and textarea styling */
+        .Contact-Form input[type="text"],
+        .Contact-Form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 0.95rem;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Focus state for inputs */
+        .Contact-Form input[type="text"]:focus,
+        .Contact-Form textarea:focus {
+            outline: none;
+            border-color: #009E0F; /* Green border on focus */
+            box-shadow: 0 0 5px rgba(0, 158, 15, 0.3);
+        }
+
+        /* Textarea sizing */
+        .Contact-Form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        /* Submit button styling */
+        .Contact-Form input[type="submit"] {
+            background-color: #FF9900; /* Orange button */
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        /* Submit button hover state */
+        .Contact-Form input[type="submit"]:hover {
+            background-color: #E68A00; /* Darker orange on hover */
+        }
+
+        /* Span element for spacing */
+        .Contact-Form span {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Company contact information container */
+        .company-description {
+            width: 48%;
+        }
+
+        /* Company description heading */
+        .company-description h3 {
+            color: #228B22; /* Forest green */
+            margin-bottom: 10px;
+        }
+
+        /* Company description paragraph */
+        .company-description p {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Social icons container */
+        .social-icons {
+            margin-top: 15px;
+        }
+
+        /* Social media links */
+        .social-icons a {
+            margin-right: 10px;
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- ========== NAVIGATION BAR ========== -->
+    <!-- Main navigation bar at the top of the page -->
+    <div class="navbar">
+        <!-- Logo section - links back to home page -->
+        <div class="logo">
+            <a href="home.html">
+                <!-- EcoMart Logo -->
+                <img src="..\Assets\Images\logo.png" alt="EcoMart Logo" height="100">
+            </a>
+        </div>    
+        
+        <!-- Navigation links section -->
+        <div class="links">
+            <!-- Home page link -->
+            <nav class="select"> <a href="home.html">Home</a> </nav>
+            <!-- Products page link -->
+            <nav class="select"> <a href="products.html">Products</a> </nav>
+            <!-- Blog page link -->
+            <nav class="select"> <a href="blog.html">Blog</a> </nav>
+            <!-- Research page link -->
+            <nav class="select"> <a href="research.html">Research</a> </nav>
+            <!-- About Us page link -->
+            <nav class="select"> <a href="about.html">About Us</a> </nav>
+            <!-- Contact Us page link - currently selected -->
+            <nav class="selected"> <a href="contact.html">Contact Us</a> </nav>
+        </div>
+         
+        <!-- Shopping cart icon -->
+        <div class="cart">
+            <a href="cart.html" style="font-size: 2rem;">🛒</a>
+        </div>
+    </div>
+
+    <!-- ========== CONTACT HEADER ========== -->
+    <!-- Banner section with page title -->
+    <div class="contact-header">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you. Get in touch with EcoMart!!</p>
+    </div>
+
+    <!-- ========== CONTACT CONTENT ========== -->
+    <!-- Main container with contact info and form -->
+    <div class="contact-container">
+        <!-- LEFT SECTION: Contact Information -->
+        <div class="contact-info">
+            <h2>Get in touch</h2>
+
+            <!-- Address Information Box -->
+            <div class="Info-box">
+                <strong>📍 Address:</strong><br>
+                Kamalpokhari,Nepal
+            </div>
+
+            <!-- Phone Information Box -->
+            <div class="Info-box">
+                <strong>📞 Phone:</strong><br>
+                +977-9761692968<br>
+                +977-9761828846
+            </div>
+
+            <!-- Email Information Box -->
+            <div class="Info-box">
+                <strong>📧 Email:</strong><br>
+                customercare@ecomart.com<br>
+                developerteam@ecomart.com
+            </div>
+
+            <!-- Working Hours Information Box -->
+            <div class="Info-box">
+                <strong>⏰ Our Working Hours:</strong><br>
+                Sun - Fri: 10:00 AM to 5:00 PM
+            </div>
+        </div>
+
+        <!-- RIGHT SECTION: Contact Form -->
+        <div class="Contact-Form">
+            <h2>Contact Form</h2>
+
+            <!-- Contact form - validates input before submission -->
+            <form id="contactForm" onsubmit="validateForm(event)">
+                
+                <!-- Full Name Field -->
+                <label>Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Your Full Name">
+                <!-- Error message for name validation -->
+                <span id="nameError" style="color: red; font-size: 0.9rem;"></span>
+                <br><br>
+
+                <!-- Email Field -->
+                <label>Email:</label>
+                <input type="text" id="email" name="Email" placeholder="Your Email Address">
+                <!-- Error message for email validation -->
+                <span id="emailError" style="color: red; font-size: 0.9rem;"></span>
+                <br><br>
+
+                <!-- Phone Number Field -->
+                <label>Phone:</label>
+                <input type="text" id="phone" name="phone" placeholder="Your Phone Number">
+                <!-- Error message for phone validation -->
+                <span id="phoneError" style="color: red; font-size: 0.9rem;"></span>
+                <br><br>
+
+                <!-- Message Field -->
+                <label>Message:</label>
+                <textarea rows="10" cols="25" id="message" placeholder="Enter your message"></textarea>
+                <!-- Error message for message validation -->
+                <span id="messageError" style="color: red; font-size: 0.9rem;"></span>
+                <br><br>
+
+                <!-- Submit Button -->
+                <input type="submit" value="Submit Button">
+            </form>
+        </div>
+    </div>
+
+    <!-- ========== COMPANY INFORMATION SECTION ========== -->
+    <!-- Additional company information with social media links -->
+    <div style="padding: 50px 5%; max-width: 1200px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap;">
+            <!-- Company Contact Section -->
+            <div class="contact-info">
+                <h2>Our EcoMart</h2>
+                <!-- Address -->
+                <p>Kamalpokhari, Nepal</p>
+                <!-- Phone -->
+                <p>9761692968</p><br>
+                
+                <!-- Social Media Links -->
+                <div class="social-icons">
+                    <!-- Facebook link -->
+                    <a href="#">ⓕ</a>
+                    <!-- Twitter/X link -->
+                    <a href="#">𝕏</a>
+                    <!-- TikTok link -->
+                    <a href="#">𝗧𝗶𝗸𝗧𝗼𝗸</a>
+                    <!-- Instagram link -->
+                    <a href="#">I𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦</a>
+                </div>
+            </div>
+
+            <!-- Company Description Section -->
+            <div class="company-description">
+                <!-- Company Motto -->
+                <h3>Our Motto!!</h3>
+                <p>Small choices today, greener tomorrow.</p><br>
+                
+                <!-- Company Goal -->
+                <h3>Our Goal</h3>
+                <p>We work for our customer satisfaction.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== GOOGLE MAPS SECTION ========== -->
+    <!-- Embedded Google Map showing EcoMart location -->
+    <div style="padding: 50px 5%; max-width: 1200px; margin: 0 auto; width: 100%;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3357.441346830945!2d85.32268482525392!3d27.71073172618068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1908c874a40b%3A0x87a26cbf3b75037c!2sKamal%20Pokhari!5e1!3m2!1sen!2snp!4v1768383713574!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <!-- Footer section with copyright information -->
+    <footer class="footer">
+        <p>&copy; 2026 EcoMart. All rights reserved.</p>
+    </footer>
+
+    <!-- ========== JAVASCRIPT VALIDATION ========== -->
+    <!-- Form validation and processing script -->
+    <script>
+        /**
+         * validateForm() - Validates all form inputs before submission
+         * Checks: name length, email format, phone format, message length
+         * @param {Event} event - Form submission event
+         */
+        function validateForm(event) {
+            // Prevent default form submission
+            event.preventDefault();
+            
+            // Get form input values and trim whitespace
+            const fullname = document.getElementById('fullname').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            // Clear all previous error messages
+            document.getElementById('nameError').textContent = '';
+            document.getElementById('emailError').textContent = '';
+            document.getElementById('phoneError').textContent = '';
+            document.getElementById('messageError').textContent = '';
+            
+            // Flag to track overall form validity
+            let isValid = true;
+            
+            // ========== NAME VALIDATION ==========
+            // Check if name is empty
+            if (fullname === '') {
+                document.getElementById('nameError').textContent = 'Name is required.';
+                isValid = false;
+            } 
+            // Check if name is at least 3 characters
+            else if (fullname.length < 3) {
+                document.getElementById('nameError').textContent = 'Name must be at least 3 characters.';
+                isValid = false;
+            } 
+            // Check if name contains only letters and spaces
+            else if (!/^[a-zA-Z\s]+$/.test(fullname)) {
+                document.getElementById('nameError').textContent = 'Name must contain only letters and spaces.';
+                isValid = false;
+            }
+            
+            // ========== EMAIL VALIDATION ==========
+            // Check if email is empty
+            if (email === '') {
+                document.getElementById('emailError').textContent = 'Email is required.';
+                isValid = false;
+            } 
+            // Check if email format is valid
+            else if (!isValidEmail(email)) {
+                document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+                isValid = false;
+            }
+            
+            // ========== PHONE VALIDATION ==========
+            // Check if phone is empty
+            if (phone === '') {
+                document.getElementById('phoneError').textContent = 'Phone number is required.';
+                isValid = false;
+            } 
+            // Check if phone contains at least 7 digits and valid characters
+            else if (!/^[\d\s\-\+\(\)]{7,}$/.test(phone)) {
+                document.getElementById('phoneError').textContent = 'Please enter a valid phone number.';
+                isValid = false;
+            }
+            
+            // ========== MESSAGE VALIDATION ==========
+            // Check if message is empty
+            if (message === '') {
+                document.getElementById('messageError').textContent = 'Message is required.';
+                isValid = false;
+            } 
+            // Check if message is at least 10 characters
+            else if (message.length < 10) {
+                document.getElementById('messageError').textContent = 'Message must be at least 10 characters.';
+                isValid = false;
+            }
+            
+            // ========== FORM SUBMISSION ==========
+            // If all validations pass, show success message
+            if (isValid) {
+                alert('Thank you! Your message has been sent successfully. We will get back to you soon.');
+                // Optional: Reset form fields
+                document.getElementById('contactForm').reset();
+            }
+        }
+        
+        /**
+         * isValidEmail() - Validates email format using regex
+         * @param {string} email - Email address to validate
+         * @returns {boolean} - True if email format is valid
+         */
+        function isValidEmail(email) {
+            // Regular expression for basic email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+    </script>
+</body>
+</html>

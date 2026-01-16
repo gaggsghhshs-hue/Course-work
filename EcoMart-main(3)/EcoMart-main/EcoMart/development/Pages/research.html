@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- 
+    EcoMart - Research Page
+    Description: Research and information hub for sustainable living and eco-friendly practices
+    Author: EcoMart Development Team
+    Date: 2026
+-->
+<html lang="en">
+<head>
+    <title>Research - EcoMart</title>
+    <!-- Set viewport for responsive design on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    
+    <!-- Internal CSS Styles for Research Page -->
+    <style>
+        /* Navigation link styling */
+        .select a { color: #FF9900; }
+        .selected a { color: #009E0F; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <!-- ========== NAVIGATION BAR ========== -->
+    <!-- Main navigation bar at the top of the page -->
+    <div class="navbar">
+        <!-- Logo section - links back to home page -->
+        <div class="logo">
+            <a href="home.html">
+                <!-- EcoMart Logo -->
+                <img src="../Assets/Images/logo.png" alt="EcoMart Logo" height="100">
+            </a>
+        </div>    
+        
+        <!-- Navigation links section -->
+        <div class="links">
+            <!-- Home page link -->
+            <nav class="select"> <a href="home.html">Home</a> </nav>
+            <!-- Products page link -->
+            <nav class="select"> <a href="products.html">Products</a> </nav>
+            <!-- Blog page link -->
+            <nav class="select"> <a href="blog.html">Blog</a> </nav>
+            <!-- Research page link - currently selected -->
+            <nav class="selected"> <a href="research.html">Research</a> </nav>
+            <!-- About Us page link -->
+            <nav class="select"> <a href="about.html">About Us</a> </nav>
+            <!-- Contact Us page link -->
+            <nav class="select"> <a href="contact.html">Contact Us</a> </nav>
+        </div>
+        
+        <!-- Shopping cart icon -->
+        <div class="cart">
+            <a href="cart.html" style="font-size: 2rem;">🛒</a>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <!-- Footer section with copyright information -->
+    <footer class="footer">
+        <p>&copy; 2026 EcoMart. All rights reserved.</p>
+    </footer>
+    
+    <!-- Link to external JavaScript file for interactive functionality -->
+    <script src="../js/script.js"></script>
+</body>
+</html>

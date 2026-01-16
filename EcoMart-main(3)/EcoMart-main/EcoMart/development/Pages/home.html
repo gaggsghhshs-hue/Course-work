@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- EcoMart - Home Page | Landing page for sustainable products -->
+<html lang="en">
+<head>
+    <title>Home - EcoMart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    
+    <style>
+        /* Navigation styling */
+        .select a { color: #FF9900; text-decoration: none; }
+        .selected a { color: #009E0F; text-decoration: none; font-weight: bold; }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: white; }
+
+        /* Navbar - flex layout */
+        .navbar { display: flex; align-items: center; justify-content: space-between; padding: 10px 5%; border-bottom: 1px solid #ddd; }
+        .links { display: flex; gap: 15px; }
+
+        /* Hero banner section */
+        .hero-section { background-color: #f0fdf0; padding: 60px 5%; text-align: center; border-bottom: 2px solid #009E0F; }
+        .hero-section h1 { color: #009E0F; font-size: 2.5rem; }
+        .hero-section p { color: #555; font-size: 1.1rem; max-width: 800px; margin: 10px auto; }
+
+        /* Product cards grid */
+        .product-display { display: flex; justify-content: center; gap: 30px; padding: 50px 5%; flex-wrap: wrap; }
+        .eco-card { width: 280px; text-align: center; border: 1px solid #eee; padding: 15px; border-radius: 10px; transition: 0.3s; }
+        .eco-card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .eco-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
+        .eco-card h3 { color: #009E0F; margin: 15px 0 5px 0; }
+
+        /* Footer */
+        .footer { padding: 20px; text-align: center; background-color: #f9f9f9; }
+    </style>
+</head>
+
+<body>
+    <!-- ========== NAVIGATION BAR ========== -->
+    <div class="navbar">
+      <div class="logo">
+          <a href="home.html">
+             <img src="../Assets/Images/logo.png" alt="EcoMart Logo" height="100" onerror="this.src='https://via.placeholder.com/150x100?text=EcoMart+Logo'">
+          </a>
+      </div>    
+      <div class="links">
+            <nav class="selected"> <a href="home.html">Home</a> </nav>
+            <nav class="select"> <a href="products.html">Products</a> </nav>
+            <nav class="select"> <a href="blog.html">Blog</a> </nav>
+            <nav class="select"> <a href="research.html">Research</a> </nav>
+            <nav class="select"> <a href="about.html">About Us</a> </nav>
+            <nav class="select"> <a href="contact.html">Contact Us</a> </nav>
+        </div>
+      <div class="cart">
+            <a href="cart.html" style="font-size: 2rem;">🛒</a>
+         </div>
+    </div>
+
+    <!-- ========== HERO SECTION ========== -->
+    <div class="hero-section">
+        <h1>Sustainable Shopping Made Simple</h1>
+        <p>At EcoMart, we provide eco-friendly alternatives for your everyday needs. Join us in our mission to reduce waste and protect our planet, one purchase at a time.</p>
+    </div>
+
+    <!-- ========== PRODUCT SHOWCASE ========== -->
+    <div class="product-display">
+        <div class="eco-card">
+            <img src="../Assets/Images/room.png" alt="Sustainable Bedding">
+            <h3>Eco Home</h3>
+            <p>Organic cotton and bamboo essentials for a greener household.</p>
+        </div>
+
+        <div class="eco-card">
+            <img src="../Assets/Images/zero_waste_kit.png" alt="Zero Waste Kit">
+            <h3>Zero Waste</h3>
+            <p>Cut down on plastic with our curated zero-waste starter kits.</p>
+        </div>
+
+        <div class="eco-card">
+            <img src="../Assets/Images/natural_skincare.png" alt="Natural Skincare">
+            <h3>Natural Care</h3>
+            <p>Chemical-free beauty products that are kind to your skin and the Earth.</p>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <p>&copy; 2026 EcoMart. All rights reserved.</p>
+    </footer>
+    
+    <script src="../js/script.js"></script>
+</body>
+</html>

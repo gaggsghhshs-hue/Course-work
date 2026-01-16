@@ -1,0 +1,108 @@
+
+body {
+    background-color: white; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    border-bottom: 1px solid #ddd;
+}
+
+.links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.links a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+.cart a {
+    text-decoration: none;
+}
+
+
+.select a { color: #FF9900; }
+.selected a { color: #009E0F; }
+
+.links nav:not(:last-child)::after {
+    content: "|";
+    position: absolute;
+    right: -8px;
+    color: #009E0F;
+}
+
+
+.search {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #a5c7fe;
+    border-radius: 20px;
+    padding: 5px 15px;
+    width: 250px;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+}
+
+
+.hero-section {
+    background-color: #f0fdf0; 
+    padding: 60px 5%;
+    text-align: center;
+    border-bottom: 2px solid #009E0F;
+}
+
+.hero-section h1 {
+    color: #009E0F;
+    font-size: 2.5rem;
+}
+
+
+.product-display {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 5%;
+    flex-wrap: wrap;
+}
+
+.eco-card {
+    width: 280px;
+    text-align: center;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 10px;
+    background: white;
+    transition: 0.3s;
+}
+
+.eco-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.footer {    
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-top: auto;
+}
